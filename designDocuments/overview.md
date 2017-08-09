@@ -15,7 +15,7 @@ The background script continously runs whenever the browser is open, as part of 
 This extension will not need to rely on anything aside from jquery and native Chrome APIs.
 
 ## Data Structure
-The only information that the extension needs to store is the location the background script is attempting to navigate the user to. 
+The only information that the extension needs to store is the location the background script is attempting to navigate the user to. This will be stored solely in the background script, and will be dumped when the user has been successfully navigated to the correct edit page.
 
 ## User Interface
 No user interface is needed for this project. This extension will not have a popup.
