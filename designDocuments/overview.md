@@ -9,3 +9,8 @@ This extension will use Chrome Context Menus to make the new right click option 
 Content scripts have access to the DOM of the page they're injected into, which we will need when checking to see what kind of link the user is clicking on. 
 
 The background script continously runs whenever the browser is open, as part of the extension rather than a specific web page. Since navigating to the edit page of a file requires changing pages, using a content script would become difficult. 
+
+## User Interface
+No user interface is needed for this project. This extension will not have a popup.
+
+The context menu option will be labeled as "Edit File."
