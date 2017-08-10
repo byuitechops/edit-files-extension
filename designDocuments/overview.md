@@ -1,7 +1,9 @@
 # Edit File Extension
 
 ## Problem Description
-In Brightspace, there isn't an available API or way to create an intuitive shortcut to editing an html page. The only two available options are editing a content page by clicking "Edit HTML" after navigating to the page, or selecting the same within the "Manage Files" menu. Both require extra navigation. The main purpose of this Chrome Extension is to allow users to right click on any link to an D2L HTML page within a Brightspace course and be provided with an option to "Edit File." When the user clicks this option, the extension navigates to the edit page for that specific file automatically. This used in tandem with the "Course Search" tool will allow users to search for something within a course, and then open directly to the edit page for files in the results.
+In Brightspace, there isn't an available API or way to create an intuitive shortcut to editing an html page. The only two available options are editing a content page by clicking "Edit HTML" after navigating to the page, or selecting the same within the "Manage Files" menu. Both require extra navigation. The main purpose of this Chrome Extension feature is to allow users to right click on any link to an D2L HTML page within a Brightspace course and be provided with an option to "Edit File." When the user clicks this option, the extension navigates to the edit page for that specific file automatically. This used in tandem with the "Course Search" tool will allow users to search for something within a course, and then open directly to the edit page for files in the results.
+
+This feature will be implemented into the existing internal use extension used by the Online Learning department.
 
 ## Design Overview
 This extension will use Chrome Context Menus to make the new right click option available. This extension's content scripts will be injected into any available brightspace page, as long as the user is in a course. Those content scripts will watch for when the user opens the context (right click) menu on a link. If the link's *href* attribute leads to one of the course's html pages, it will add a new option to the context menu to "Edit file."
@@ -12,7 +14,7 @@ Content scripts have access to the DOM of the page they're injected into, which 
 
 The background script continously runs whenever the browser is open, as part of the extension rather than a specific web page. Since navigating to the edit page of a file requires changing pages, using a content script would become difficult. 
 
-This extension will not need to rely on anything aside from jquery and native Chrome APIs.
+This feature will not need to rely on anything aside from jquery and native Chrome APIs.
 
 ## Data Structure
 The only information that the extension needs to store is the location the background script is attempting to navigate the user to. This will be stored solely in the background script, and will be dumped when the user has been successfully navigated to the correct edit page.
