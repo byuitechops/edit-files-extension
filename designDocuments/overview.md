@@ -8,29 +8,27 @@ This feature will be implemented into the existing internal use extension used b
 ## Design Overview
 This extension will use Chrome Context Menus to make the new right click option available. The new context menu item will be created in the extension's background script. That option will trigger a series of functions housed on the background script. Those functions will navigate the user to the correct edit page for the link they selected, by jumping them to the course's "Manage Files" page in a new tab. Following, it will move them through the necessary folders, then click "edit" on the appropriate file. Once the edit window has loaded, it will resize it to match the height/width of the current browser window.
 
-The "Edit File in Course" option will be available no matter what website you're on, but only one links that match the course link pattern. This pattern includes links in these formats:
+The "Edit File in Course" option will be available no matter what website you're on, but only links that match the course link pattern. This pattern includes links in these formats:
 
 *Course Content Page View/Edit*<br>
-https://byui.brightspace.com/d2l/le/content/*/*
+https://byui.brightspace.com/d2l/le/content/*
 
 *Course Content Quicklinks to View a Content Page*<br>
-https://byui.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_produ-*
+https://byui.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=*
 
-https://byui.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_production-*
-
-https://pathway.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_produ-*
-
-https://pathway.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_production-*
+https://pathway.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=*
 
 *Direct Path Address*<br>
-https://byuidav.brightspace.com/content/enforced/*
+https://byui*.brightspace.com/content/enforced/*
 
-https://pathwaydav.brightspace.com/content/enforced/* (This has not been set up yet)
+https://pathway*.brightspace.com/content/enforced/* (This has not been set up yet)
 
 *Manage Files Download Link*<br>
 https://byui.brightspace.com/d2l/common/viewFile.d2lfile/*
 
 https://pathway.brightspace.com/d2l/common/viewFile.d2lfile/*
+
+Note: * Indicates that anything can be placed there in the URL
 
 This feature will not need to rely on anything aside from jquery and native Chrome APIs.
 
