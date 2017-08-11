@@ -41,4 +41,4 @@ No user interface is needed for this project. This extension will not have a pop
 The context menu option will be labeled as "Edit File in Course."
 
 ## Structure Chart
-![alt text](./sequence.png "UI Design Mockup")
+![alt text](./sequence.png "Sequence Diagram")
