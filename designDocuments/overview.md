@@ -14,12 +14,12 @@ The "Edit File in Course" option will be available no matter what website you're
 https://byui.brightspace.com/d2l/le/content/*/*
 
 *Course Content Quicklinks to View a Content Page*<br>
-https://byui.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_produ-*
-*or*
+https://byui.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_produ-*<br>
+*or*<br>
 https://byui.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_production-*
 
-https://pathway.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_produ-*
-*or*
+https://pathway.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_produ-*<br>
+*or*<br>
 https://pathway.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=*&type=content&rcode=byui_production-*
 
 *Direct Path Address*<br>
