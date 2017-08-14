@@ -31,8 +31,8 @@ In cases where the provided url does not have the filepath included (`content/en
 
 Parameters | Details 
 --|---
-ou | Course OU to provide the API with
-topicId | Topic ID to use to match against API results to find the correct filepath
+ou: String | Course OU to provide the API with
+topicId: String | Topic ID to use to match against API results to find the correct filepath
 
 Returns | Details
 --|---
@@ -44,8 +44,8 @@ Opens the given course (as discovered by extractInfo()) to it's "Manage Files" p
 
 Parameters | Details 
 --|---
-domain | Used to build the URL this function will open (either 'pathway' or 'byui')
-ou | Course OU used to build the URL this function will open
+domain: String | Used to build the URL this function will open (either 'pathway' or 'byui')
+ou: String | Course OU used to build the URL this function will open
 
 Returns nothing, but triggers `openFile()`.
 
@@ -55,7 +55,7 @@ Sees the functions for navigating to and opening the requested file through to c
 
 Parameters | Details 
 --|---
-filepath | Used in all children functions
+filepath: String | Used in all children functions
 
 Returns nothing; controls sequence to navigate and open file into edit window.
 
@@ -65,7 +65,7 @@ Autonomously navigates the user through to the file requested.
 
 Parameters | Details 
 --|---
-filepath | Contains path to the file this function will navigate to in the Manage Files view
+filepath: String | Contains path to the file this function will navigate to in the Manage Files view
 
 Returns nothing; navigates to location where file is stored.
 
@@ -75,7 +75,7 @@ Autonomously opens the requested file (once navigated to) into an edit window.
 
 Parameters | Details 
 --|---
-filepath | Used to determine the filename when opening the file into the edit window
+filepath: String | Used to determine the filename when opening the file into the edit window
 
 Returns | Details
 --|---
@@ -87,7 +87,7 @@ Resizes the edit window to fill the browser tab.
 
 Parameters | Details 
 --|---
-window | Reference to the edit window just opened, so we can resize it
+window: Object | Reference to the edit window just opened, so we can resize it
 
 Returns nothing; resizes edit window.
 
